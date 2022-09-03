@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { HomePage } from '../components/organisms/homepage';
 import { trpc } from '../utils/trpc';
 
 type TechnologyCardProps = {
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			
+			<HomePage />
 		</>
 	);
 };
