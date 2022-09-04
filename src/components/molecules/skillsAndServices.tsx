@@ -45,6 +45,16 @@ const skills = [
 			</>
 		),
 	},
+	{
+		name: 'Technical Sourcing and Recruiting',
+		icon: 'technicalsourcing.png',
+		description: (
+			<>
+				I know tons of talented individuals. Looking for a specific set of skills? Reach out and I may be able to match
+				you with a superstar. I have currently matched 10+ people across 3 companies.
+			</>
+		),
+	},
 ] as const;
 
 export function SkillsAndServices() {

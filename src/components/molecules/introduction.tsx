@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const languages = {
 	Typescript: {
@@ -22,6 +23,7 @@ const languages = {
 export function Introduction() {
 	const now = new Date();
 	const [sortType, setSortType] = useState<'Years of Experience' | 'Skill Level'>('Skill Level');
+	const [parent] = useAutoAnimate<HTMLDivElement>({ duration: 550 });
 	return (
 		<div className="bg-grey-50" id="about">
 			<div className="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
@@ -78,29 +80,30 @@ export function Introduction() {
 							{sortType}
 						</div>
 					</div>
-
-					{Object.entries(languages)
-						.sort(([_languageName, data1], [_languageName2, data2]) =>
-							sortType === 'Skill Level'
-								? data2.skillLevel.localeCompare(data1.skillLevel)
-								: data1.startYear - data2.startYear,
-						)
-						.map(([languageName, data]) => {
-							const yoe = now.getFullYear() - data.startYear;
-							return (
-								<div key={languageName} className="m-8">
-									<div className="flex items-end justify-between">
-										<h4 className="font-body font-semibold uppercase text-black">{languageName}</h4>
-										<h4 className="font-body text-xl font-bold text-primary">
-											{yoe} Year{yoe > 1 ? 's' : ''} of Experience
-										</h4>
+					<div ref={parent}>
+						{Object.entries(languages)
+							.sort(([_languageName, data1], [_languageName2, data2]) =>
+								sortType === 'Skill Level'
+									? data2.skillLevel.localeCompare(data1.skillLevel)
+									: data1.startYear - data2.startYear,
+							)
+							.map(([languageName, data]) => {
+								const yoe = now.getFullYear() - data.startYear;
+								return (
+									<div key={languageName} className="m-8">
+										<div className="flex items-end justify-between">
+											<h4 className="font-body font-semibold uppercase text-black">{languageName}</h4>
+											<h4 className="font-body text-xl font-bold text-primary">
+												{yoe} Year{yoe > 1 ? 's' : ''} of Experience
+											</h4>
+										</div>
+										<div className="mt-2 h-3 w-full rounded-full bg-lila">
+											<div className="h-3 rounded-full bg-primary" style={{ width: data.skillLevel }}></div>
+										</div>
 									</div>
-									<div className="mt-2 h-3 w-full rounded-full bg-lila">
-										<div className="h-3 rounded-full bg-primary" style={{ width: data.skillLevel }}></div>
-									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+					</div>
 				</div>
 			</div>
 		</div>
