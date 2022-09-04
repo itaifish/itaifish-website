@@ -1,4 +1,25 @@
+const languages = {
+	Typescript: {
+		startYear: 2020,
+		skillLevel: '90%',
+	},
+	Javascript: {
+		startYear: 2013,
+		skillLevel: '70%',
+	},
+	Java: {
+		startYear: 2015,
+		skillLevel: '65%',
+	},
+	Rust: {
+		startYear: 2021,
+		skillLevel: '40%',
+	},
+};
+
 export function Introduction() {
+	const now = new Date();
+
 	return (
 		<div className="bg-grey-50" id="about">
 			<div className="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
@@ -7,78 +28,61 @@ export function Introduction() {
 						Who am I?
 					</h2>
 					<h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-						I{"'"}m Christy Smith, a Web Designer & Photographer
+						I{"'"}m Itai Fish, a Software Engineer
 					</h4>
-					<p className="pt-6 font-body leading-relaxed text-grey-20">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-						ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-						nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-						anim id est laborum.
+					<p className="pt-6 font-body leading-relaxed text-grey-10">
+						I got my start in the realm of Computer Science at the age of 10 when, after looking to not just play games
+						but make them, I was introduced to{' '}
+						<a href="https://gamemaker.io/en/gamemaker" target="_blank" rel="noreferrer" className="text-primary">
+							Gamemaker.
+						</a>{' '}
+						I spent much of my middle-school years designing and programming video games. The summer before high school
+						I apprenticed at a Computational Modeling and Computer Science education non-profit,{' '}
+						<a href="http://shodor.org/" target="_blank" rel="noreferrer" className="text-primary">
+							Shodor
+						</a>
+						. There, I learned Javascript and web design.
 					</p>
-					<div className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
-						<div className="flex items-center justify-center sm:justify-start">
-							<p className="font-body text-lg font-semibold uppercase text-grey-20">Connect with me</p>
-							<div className="hidden sm:block">
-								<i className="bx bx-chevron-right text-2xl text-primary"></i>
-							</div>
-						</div>
-						<div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-							<a href="/">
-								<i className="bx bxl-facebook-square hover:text-yellow text-2xl text-primary"></i>
-							</a>
-							<a href="/" className="pl-4">
-								<i className="bx bxl-twitter hover:text-yellow text-2xl text-primary"></i>
-							</a>
-							<a href="/" className="pl-4">
-								<i className="bx bxl-dribbble hover:text-yellow text-2xl text-primary"></i>
-							</a>
-							<a href="/" className="pl-4">
-								<i className="bx bxl-linkedin hover:text-yellow text-2xl text-primary"></i>
-							</a>
-							<a href="/" className="pl-4">
-								<i className="bx bxl-instagram hover:text-yellow text-2xl text-primary"></i>
-							</a>
-						</div>
-					</div>
+					<p className="pt-6 font-body leading-relaxed text-grey-10">
+						In high school, I took a Java/OOP intro class at the local community college, and continued making video
+						games. My senior year, I entered into the{' '}
+						<a
+							href="https://en.wikipedia.org/wiki/Technology_Student_Association"
+							className="text-primary"
+							target={'_blank'}
+							rel="noreferrer"
+						>
+							Technology Student Association
+						</a>{' '}
+						competition with some friends, winning a state-level competition in videogame design, and a national-level
+						competition in coding. I then went to college, first at The University of North Carolina at Asheville, and
+						then after a year, transferring to The University of North Carolina at Chapel Hill.
+					</p>
+					<p className="pt-6 font-body leading-relaxed text-grey-10">
+						I am a lifelong student, vegetarian, chess player, basketball player and fan, and Magic: The Gathering
+						enthusiast. I love the art of problem solving, engineering, and technology.
+					</p>
 				</div>
 				<div className="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
-					<div>
-						<div className="flex items-end justify-between">
-							<h4 className="font-body font-semibold uppercase text-black">HTML & CSS</h4>
-							<h3 className="font-body text-3xl font-bold text-primary">85%</h3>
-						</div>
-						<div className="mt-2 h-3 w-full rounded-full bg-lila">
-							<div className="h-3 rounded-full bg-primary" style={{ width: '85%' }}></div>
-						</div>
-					</div>
-					<div className="pt-6">
-						<div className="flex items-end justify-between">
-							<h4 className="font-body font-semibold uppercase text-black">Python</h4>
-							<h3 className="font-body text-3xl font-bold text-primary">70%</h3>
-						</div>
-						<div className="mt-2 h-3 w-full rounded-full bg-lila">
-							<div className="h-3 rounded-full bg-primary" style={{ width: '70%' }}></div>
-						</div>
-					</div>
-					<div className="pt-6">
-						<div className="flex items-end justify-between">
-							<h4 className="font-body font-semibold uppercase text-black">Javascript</h4>
-							<h3 className="font-body text-3xl font-bold text-primary">98%</h3>
-						</div>
-						<div className="mt-2 h-3 w-full rounded-full bg-lila">
-							<div className="h-3 rounded-full bg-primary" style={{ width: '98%' }}></div>
-						</div>
-					</div>
-					<div className="pt-6">
-						<div className="flex items-end justify-between">
-							<h4 className="font-body font-semibold uppercase text-black">Figma</h4>
-							<h3 className="font-body text-3xl font-bold text-primary">91%</h3>
-						</div>
-						<div className="mt-2 h-3 w-full rounded-full bg-lila">
-							<div className="h-3 rounded-full bg-primary" style={{ width: '91%' }}></div>
-						</div>
-					</div>
+					<h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+						Favourite Languages
+					</h4>
+					{Object.entries(languages).map(([languageName, data]) => {
+						const yoe = now.getFullYear() - data.startYear;
+						return (
+							<div key={languageName} className="m-8">
+								<div className="flex items-end justify-between">
+									<h4 className="font-body font-semibold uppercase text-black">{languageName}</h4>
+									<h4 className="font-body text-xl font-bold text-primary">
+										{yoe} Year{yoe > 1 ? 's' : ''} of Experience
+									</h4>
+								</div>
+								<div className="mt-2 h-3 w-full rounded-full bg-lila">
+									<div className="h-3 rounded-full bg-primary" style={{ width: data.skillLevel }}></div>
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>

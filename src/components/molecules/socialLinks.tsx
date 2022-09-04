@@ -22,7 +22,7 @@ export function SocialLinks() {
 					</div>
 					<div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
 						<h1 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
-							Hello I{"'"}m Itai Fish!
+							Personal Website of Itai Fish
 						</h1>
 						<div className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
 							<div className="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
@@ -41,7 +41,7 @@ export function SocialLinks() {
 									<i className="bx bxl-linkedin hover:text-yellow text-2xl text-white"></i>
 								</a>
 								<a href="mailto:itai.rivkin.fish@gmail.com" target="_blank" className="pl-4" rel="noreferrer">
-									<i className="bx bxl-gmail hover:text-yellow text-2xl text-white"></i>
+									<i className="bx bx-envelope hover:text-yellow text-2xl text-white"></i>
 								</a>
 							</div>
 						</div>
