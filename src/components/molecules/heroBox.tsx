@@ -4,7 +4,7 @@ export function HeroBox() {
 	return (
 		<div
 			className="relative bg-cover bg-center bg-no-repeat py-8"
-			style={{ backgroundImage: 'url(/assets/gim / bg - hero.jpg)' }}
+			style={{ backgroundImage: 'url(/assets/img/itaiWithFamily.jpg)' }}
 		>
 			<div className="absolute inset-0 z-20 bg-gradient-to-b from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"></div>
 
@@ -13,8 +13,8 @@ export function HeroBox() {
 					<div className="relative h-48 w-48 rounded-full border-8 border-primary shadow-xl sm:h-56">
 						<Image
 							src="/assets/img/itailinkedin.jpeg"
-							className=" rounded-full"
-							layout="fill" // required
+							className="rounded-full"
+							layout="fill"
 							objectFit="cover"
 							alt="Picture of Itai"
 						/>

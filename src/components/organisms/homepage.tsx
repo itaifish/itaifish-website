@@ -2,7 +2,6 @@ import { Clients } from '../molecules/clients';
 import { Contact } from '../molecules/contact';
 import { NavBar } from '../molecules/navBar';
 import { Introduction } from '../molecules/introduction';
-import { Portfolio } from '../molecules/portfolio';
 import { SkillsAndServices } from '../molecules/skillsAndServices';
 import { HeroBox } from '../molecules/heroBox';
 import { StatsProfile } from '../molecules/statsProfile';
@@ -19,9 +18,8 @@ export function HomePage() {
 					<HeroBox />
 					<Introduction />
 					<SkillsAndServices />
-					<Portfolio />
-					<Clients />
 					<WorkExperience />
+					<Clients />
 					<StatsProfile />
 					<Contact />
 					<Subscribe />
