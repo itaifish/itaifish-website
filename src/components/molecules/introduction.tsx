@@ -25,19 +25,19 @@ export function Introduction() {
 						</div>
 						<div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
 							<a href="/">
-								<i className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
+								<i className="bx bxl-facebook-square hover:text-yellow text-2xl text-primary"></i>
 							</a>
 							<a href="/" className="pl-4">
-								<i className="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
+								<i className="bx bxl-twitter hover:text-yellow text-2xl text-primary"></i>
 							</a>
 							<a href="/" className="pl-4">
-								<i className="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
+								<i className="bx bxl-dribbble hover:text-yellow text-2xl text-primary"></i>
 							</a>
 							<a href="/" className="pl-4">
-								<i className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
+								<i className="bx bxl-linkedin hover:text-yellow text-2xl text-primary"></i>
 							</a>
 							<a href="/" className="pl-4">
-								<i className="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
+								<i className="bx bxl-instagram hover:text-yellow text-2xl text-primary"></i>
 							</a>
 						</div>
 					</div>
