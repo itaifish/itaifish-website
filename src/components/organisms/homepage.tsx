@@ -4,10 +4,11 @@ import { NavBar } from '../molecules/navBar';
 import { Introduction } from '../molecules/introduction';
 import { Portfolio } from '../molecules/portfolio';
 import { SkillsAndServices } from '../molecules/skillsAndServices';
-import { SocialLinks } from '../molecules/socialLinks';
+import { HeroBox } from '../molecules/heroBox';
 import { StatsProfile } from '../molecules/statsProfile';
 import { Subscribe } from '../molecules/subscribe';
 import { WorkExperience } from '../molecules/workExperience';
+import { Footer } from '../molecules/footer';
 
 export function HomePage() {
 	return (
@@ -15,7 +16,7 @@ export function HomePage() {
 			<div className="absolute top-0 z-50 w-full">
 				<>
 					<NavBar />
-					<SocialLinks />
+					<HeroBox />
 					<Introduction />
 					<SkillsAndServices />
 					<Portfolio />
@@ -24,6 +25,7 @@ export function HomePage() {
 					<StatsProfile />
 					<Contact />
 					<Subscribe />
+					<Footer />
 				</>
 			</div>
 		</>
