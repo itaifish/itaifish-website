@@ -122,7 +122,7 @@ export function WorkExperience() {
 								<span className="shrink-0 cursor-pointer" onClick={() => window.open(experience.companyUrl, '_blank')}>
 									<img
 										src={`/assets/img/logo/${experience.logo}`}
-										className={`w-${experience.logo === 'mudra-capital.svg' ? 48 : 32} h-auto`}
+										className={`h-auto w-32`}
 										alt={`${experience.companyName} company logo`}
 									/>
 								</span>
