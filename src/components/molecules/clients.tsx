@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export function Clients() {
 	return (
 		<div className="bg-grey-50" id="clients">

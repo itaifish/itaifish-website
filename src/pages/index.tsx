@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { HomePage } from '../components/organisms/homepage';
-import { trpc } from '../utils/trpc';
 
 const Home: NextPage = () => {
 	return (

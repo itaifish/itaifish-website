@@ -21,7 +21,7 @@ export function Subscribe() {
 							id="email"
 							placeholder="Give me your Email"
 						/>
-						<button className="mt-2 rounded bg-yellow px-8 py-3 font-body text-base font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-white focus:border-transparent focus:outline-none focus:ring focus:ring-yellow sm:ml-2 sm:mt-0 sm:py-4 md:text-lg">
+						<button className="bg-yellow focus:ring-yellow mt-2 rounded px-8 py-3 font-body text-base font-bold uppercase text-primary transition-colors hover:bg-primary hover:text-white focus:border-transparent focus:outline-none focus:ring sm:ml-2 sm:mt-0 sm:py-4 md:text-lg">
 							Join the club
 						</button>
 					</form>

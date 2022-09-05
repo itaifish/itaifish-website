@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-html-link-for-pages */
 export function Portfolio() {
 	return (
 		<div className="container py-16 md:py-20" id="portfolio">
