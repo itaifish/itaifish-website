@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const links = [
 	{
@@ -29,14 +29,26 @@ const links = [
 	},
 ];
 
+const scrollAmount = 400;
+
 export function NavBar() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
+	const [isShadow, setShadow] = useState(false);
+	useEffect(() => {
+		window.onscroll = () => {
+			setShadow(window.pageYOffset >= scrollAmount);
+		};
+	}, []);
 	return (
-		<div className="flex w-full items-center justify-between bg-primary" style={{ maxWidth: '100%' }}>
+		<div
+			className={`sticky top-0 z-50 flex w-full items-center justify-between bg-primary ${
+				isShadow ? 'shadow-2xl' : ''
+			}`}
+		>
 			<div className="container flex w-full items-center justify-between bg-primary">
 				<Link className="mt-8" href="/" passHref>
 					<a>
-						<div className="border-5 relative mt-10 h-40 w-40">
+						<div className="border-5 lg:h-30 lg:w-30 relative mt-10 mb-10 h-10 w-10 sm:h-15 sm:w-15 md:h-20 md:w-20 ">
 							<Image src="/assets/img/FishLogo.png" layout="fill" alt="logo image" />
 						</div>
 					</a>
@@ -44,7 +56,7 @@ export function NavBar() {
 				<div className="hidden lg:block">
 					<ul className="flex items-center">
 						{links.map((link, idx) => (
-							<li key={idx} className="group pl-6">
+							<li key={idx} className="group mt-10 mb-10 pl-6">
 								<span className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">
 									{link.name}
 								</span>
@@ -55,7 +67,7 @@ export function NavBar() {
 				</div>
 				<div className="block lg:hidden">
 					<button onClick={() => setMenuOpen(true)}>
-						<i className="bx bx-menu text-4xl text-white"></i>
+						<i className="bx bx-menu mb-10 mt-10 text-4xl text-white"></i>
 					</button>
 				</div>
 			</div>

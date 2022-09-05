@@ -52,11 +52,7 @@ const stats = [
 
 export function StatsProfile() {
 	return (
-		<div
-			className="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
-			// style="background-image: url(/assets/img/experience-figure.png)"
-			id="statistics"
-		>
+		<div className="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24" id="statistics">
 			<div className="container">
 				<div className="mx-auto w-5/6 bg-white py-16 shadow md:w-11/12 lg:py-20 xl:py-24 2xl:w-full">
 					<h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
