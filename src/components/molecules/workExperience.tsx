@@ -20,7 +20,7 @@ const workExperience: Experience[] = [
 				After talking with their CEO, I joined Mudra Capital as the development team lead, taking responsibility for the
 				design of Mudra’s entire tech stack. Joined by a wonderful coworker, I built out Mudra’s website, backend, and
 				database. We used <b>Microsoft Azure</b> as our cloud provider, and built the website in <b>NextJS</b>, with a{' '}
-				<b>NodeJS</b> backend, as well as both a PostgreSQL and MongoDB database.
+				<b>NodeJS</b> backend, as well as both a <b>PostgreSQL</b> and <b>MongoDB</b> database.
 			</>
 		),
 	},

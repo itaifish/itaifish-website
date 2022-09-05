@@ -93,7 +93,7 @@ export function Introduction() {
 									<div key={languageName} className="m-8">
 										<div className="flex items-end justify-between">
 											<h4 className="font-body font-semibold uppercase text-black">{languageName}</h4>
-											<h4 className="font-body text-xl font-bold text-primary">
+											<h4 className="float-right ml-20 font-body text-xl font-bold text-primary">
 												{yoe} Year{yoe > 1 ? 's' : ''} of Experience
 											</h4>
 										</div>

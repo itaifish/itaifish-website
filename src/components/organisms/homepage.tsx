@@ -3,6 +3,8 @@ import { Introduction } from '../molecules/introduction';
 import { SkillsAndServices } from '../molecules/skillsAndServices';
 import { HeroBox } from '../molecules/heroBox';
 import { WorkExperience } from '../molecules/workExperience';
+import { Footer } from '../molecules/footer';
+import { StatsProfile } from '../molecules/statsProfile';
 
 export function HomePage() {
 	return (
@@ -14,11 +16,13 @@ export function HomePage() {
 					<Introduction />
 					<SkillsAndServices />
 					<WorkExperience />
-					{/* <Clients />
 					<StatsProfile />
+					{/* <Clients />
+					
 					<Contact />
 					<Subscribe />
-					<Footer /> */}
+					*/}
+					<Footer />
 				</>
 			</div>
 		</>
