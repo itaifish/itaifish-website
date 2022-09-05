@@ -19,14 +19,14 @@ const links = [
 		name: 'Statistics',
 		scrollTo: 'statsProfile',
 	},
-	{
-		name: 'Blog',
-		scrollTo: '',
-	},
-	{
-		name: 'Contact',
-		scrollTo: '',
-	},
+	// {
+	// 	name: 'Blog',
+	// 	scrollTo: '',
+	// },
+	// {
+	// 	name: 'Contact',
+	// 	scrollTo: '',
+	// },
 ];
 
 const scrollAmount = 400;
