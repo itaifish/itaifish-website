@@ -14,7 +14,7 @@ const workExperience: Experience[] = [
 		companyName: 'Mudra Capital Management LLC',
 		companyUrl: 'https://www.mudra.capital/',
 		logo: 'mudra-capital.svg',
-		dateRange: 'July 2021 → April 2022',
+		dateRange: 'April 2022 → Present',
 		description: (
 			<>
 				After talking with their CEO, I joined Mudra Capital as the development team lead, taking responsibility for the
