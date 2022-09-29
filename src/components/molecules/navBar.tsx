@@ -2,36 +2,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-const links = [
-	{
-		name: 'About',
-		scrollTo: 'introduction',
-	},
-	{
-		name: 'Skills',
-		scrollTo: 'skillsAndServices',
-	},
-	{
-		name: 'Work Experience',
-		scrollTo: 'workExperience',
-	},
-	{
-		name: 'Statistics',
-		scrollTo: 'statsProfile',
-	},
-	// {
-	// 	name: 'Blog',
-	// 	scrollTo: '',
-	// },
-	// {
-	// 	name: 'Contact',
-	// 	scrollTo: '',
-	// },
-];
-
 const scrollAmount = 400;
 
-export function NavBar() {
+interface NavBarProps {
+	links: {
+		name: string;
+		scrollTo: string;
+	}[];
+}
+
+export function NavBar(props: NavBarProps) {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [isShadow, setShadow] = useState(false);
 	useEffect(() => {
@@ -55,7 +35,7 @@ export function NavBar() {
 				</Link>
 				<div className="hidden lg:block">
 					<ul className="flex items-center">
-						{links.map((link, idx) => (
+						{props.links.map((link, idx) => (
 							<li key={idx} className="group mt-5 mb-5 pl-6">
 								<span className="pt-0.5 font-header font-semibold uppercase text-white">
 									<Link href={`#${link.scrollTo}`} scroll={false}>
@@ -85,7 +65,7 @@ export function NavBar() {
 					</button>
 
 					<ul className="mt-8 flex flex-col">
-						{links.map((link, idx) => (
+						{props.links.map((link, idx) => (
 							<li key={idx} className="py-2">
 								<span className="pt-0.5 font-header font-semibold uppercase text-white">
 									<Link href={`#${link.scrollTo}`} scroll={false}>

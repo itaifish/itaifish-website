@@ -6,10 +6,44 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     url      = env("DATABASE_URL")
 }
 
-model Example {
-    id String @id @default(cuid())
+model JobOpportunity {
+    id             Int      @id @default(autoincrement())
+    createdAt      DateTime @default(now())
+    positionTitle  String
+    emailContact   String
+    salary         Salary   @relation(fields: [salaryId], references: [id])
+    salaryId       Int
+    workType       WorkType
+    jobDescription String?
+    location       Location @relation(fields: [locationId], references: [id])
+    locationId     Int
+}
+
+model Salary {
+    id             Int              @id @default(autoincrement())
+    rangeMin       Int
+    rangeMax       Int
+    bonusPotential Int              @default(0)
+    JobOpportunity JobOpportunity[]
+}
+
+enum WorkType {
+    REMOTE
+    HYBRID_LEAN_REMOTE
+    HYBRID_HALF_AND_HALF
+    HYBRID_LEAN_INOFFICE
+    INOFFICE
+}
+
+model Location {
+    id             Int              @id @default(autoincrement())
+    city           String
+    country        String
+    JobOpportunity JobOpportunity[]
+
+    @@unique([city, country], name: "locationStringId")
 }
