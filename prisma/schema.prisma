@@ -11,24 +11,24 @@ datasource db {
 }
 
 model JobOpportunity {
-    id             Int        @id @default(autoincrement())
-    createdAt      DateTime   @default(now())
+    id             Int      @id @default(autoincrement())
+    createdAt      DateTime @default(now())
     positionTitle  String
-    salary         Salary?
-    timeRange      TimeRange?
+    emailContact   String
+    salary         Salary   @relation(fields: [salaryId], references: [id])
+    salaryId       Int
     workType       WorkType
     jobDescription String?
-    location       Location?
-    technologies   String[]   @default([])
+    location       Location @relation(fields: [locationId], references: [id])
+    locationId     Int
 }
 
 model Salary {
-    id             Int            @id @default(autoincrement())
-    job            JobOpportunity @relation(fields: [jobId], references: [id])
-    jobId          Int            @unique
+    id             Int              @id @default(autoincrement())
     rangeMin       Int
     rangeMax       Int
-    bonusPotential Int            @default(0)
+    bonusPotential Int              @default(0)
+    JobOpportunity JobOpportunity[]
 }
 
 enum WorkType {
@@ -39,20 +39,11 @@ enum WorkType {
     INOFFICE
 }
 
-model TimeRange {
-    id    Int            @id @default(autoincrement())
-    start DateTime
-    end   DateTime
-    jobId Int            @unique
-    job   JobOpportunity @relation(fields: [jobId], references: [id])
-}
-
 model Location {
-    id      Int            @id @default(autoincrement())
-    jobId   Int            @unique
-    job     JobOpportunity @relation(fields: [jobId], references: [id])
-    city    String
-    country String
+    id             Int              @id @default(autoincrement())
+    city           String
+    country        String
+    JobOpportunity JobOpportunity[]
 
     @@unique([city, country], name: "locationStringId")
 }

@@ -5,6 +5,7 @@ import { WorkExperience } from '../molecules/workExperience';
 import { Footer } from '../molecules/footer';
 import { StatsProfile } from '../molecules/statsProfile';
 import PageWithNav from './pageWithNav';
+import { HireMe } from '../molecules/hireMe';
 
 const links = [
 	{
@@ -35,6 +36,12 @@ const links = [
 		name: 'Statistics',
 		scrollTo: 'statsProfile',
 		element: <StatsProfile />,
+		inNav: true,
+	},
+	{
+		name: 'Hire Me',
+		scrollTo: 'hireMe',
+		element: <HireMe />,
 		inNav: true,
 	},
 ];

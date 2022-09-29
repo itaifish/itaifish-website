@@ -1,5 +1,3 @@
-import { Footer } from '../molecules/footer';
-
 import { NavBar } from '../molecules/navBar';
 
 import NavigableComponentList from '../molecules/wrappers/NavigableComponentList';
@@ -22,7 +20,6 @@ function PageWithNav(props: PageWithNavProps) {
 					return { element: link.element, id: link.scrollTo };
 				})}
 			/>
-			<Footer />
 		</>
 	);
 }
