@@ -1,8 +1,7 @@
-import { boolean, z } from 'zod';
+import { z } from 'zod';
 import { newJobSchema } from '../../schemas/job.schema';
-import { FieldError, SubmitHandler, useForm } from 'react-hook-form';
+import { FieldError, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { deepExtractMessage } from '../../utils/utility';
 import { trpc } from '../../utils/trpc';
 import { useState } from 'react';
 import LoadingIcons from 'react-loading-icons';
