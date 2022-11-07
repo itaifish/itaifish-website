@@ -80,7 +80,7 @@ export function StatsProfile() {
 						))}
 					</div>
 					<img
-						src="https://raw.githubusercontent.com/itaifish/github-stats/cf4dcd1cd119525bb8b9b26e1b0cf702fb537bb2/generated/overview.svg"
+						src="https://raw.githubusercontent.com/itaifish/github-stats/master/generated/overview.svg"
 						className="mx-auto h-auto w-full sm:h-100 sm:w-auto"
 						alt="icon project"
 					/>
