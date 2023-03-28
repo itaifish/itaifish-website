@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 const monthMs = 2592000000;
 const hourMs = 1000 * 60 * 60;
-const engagedOn = 1639802357000;
+const marriedOn = new Date('2024-03-01').getTime();
 const bornAt = 923002942;
 const now = new Date().getTime();
-const monthsEngaged = Math.floor((now - engagedOn) / monthMs);
+const monthsEngaged = Math.floor((marriedOn - now) / monthMs);
 const hoursAge = Math.floor((now - bornAt) / hourMs);
 
 const stats = [
@@ -29,7 +29,7 @@ const stats = [
 		icon: 'graduation-cap.png',
 	},
 	{
-		name: 'Months of Engagement',
+		name: 'Months Until Married',
 		amount: monthsEngaged,
 		icon: 'ring.png',
 	},
@@ -45,7 +45,7 @@ const stats = [
 	},
 	{
 		name: 'One Piece Volumes Owned',
-		amount: 100,
+		amount: 101,
 		icon: 'onepiece.png',
 	},
 ];
