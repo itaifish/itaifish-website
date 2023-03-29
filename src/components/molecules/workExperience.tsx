@@ -17,7 +17,7 @@ const workExperience: Experience[] = [
 		dateRange: 'February 2023 → Present',
 		description: (
 			<>
-				All good things must come to an end, and due to unfavourable market conditions, Mudra Capital was forced to
+				All good things must come to an end, and due to unfavorable market conditions, Mudra Capital was forced to
 				eliminate their Engineering Department. I was welcomed to Rocket Mortgage, where I work on the cutting-edge
 				tools bankers use to give their clients the best service you can find in the mortgage industry. For frontend I
 				work with the <b>Angular</b> framework in <b>Typescript</b>, and use <b>.NET / C#</b> for the backend.
