@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 const monthMs = 2592000000;
 const hourMs = 1000 * 60 * 60;
-const marriedOn = new Date('2024-03-01').getTime();
+const marriedOn = new Date('2023-12-21').getTime();
 const bornAt = 923002942;
 const now = new Date().getTime();
-const monthsEngaged = Math.floor((marriedOn - now) / monthMs);
+const monthsMarried = Math.floor((now - marriedOn) / monthMs);
 const hoursAge = Math.floor((now - bornAt) / hourMs);
 
 const stats = [
 	{
 		name: 'Dota 2 Games Played',
-		amount: '2749+',
+		amount: '3020+',
 		icon: 'dota2.png',
 	},
 	{
@@ -29,8 +29,8 @@ const stats = [
 		icon: 'graduation-cap.png',
 	},
 	{
-		name: 'Months Until Married',
-		amount: monthsEngaged,
+		name: 'Months Married',
+		amount: monthsMarried,
 		icon: 'ring.png',
 	},
 	{
@@ -45,7 +45,7 @@ const stats = [
 	},
 	{
 		name: 'One Piece Volumes Owned',
-		amount: 101,
+		amount: 104,
 		icon: 'onepiece.png',
 	},
 ];
