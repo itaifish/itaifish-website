@@ -10,11 +10,31 @@ interface Experience {
 
 const workExperience: Experience[] = [
 	{
+		name: 'Software Development Engineer II',
+		companyName: 'Amazon Foundational Security Services',
+		companyUrl: 'https://www.amazon.com/',
+		logo: 'amazon.svg',
+		dateRange: 'September 2025 → Present',
+		description: (
+			<>
+				After a successful tenure at Rocket Mortgage, I was offered a position on Amazon{"'"}s Foundational Security
+				Services team, where I worked on an internal Identity Provider platform for authenticating Amazonians and other
+				interested parties that needed to access internal systems. There, I built a state-of-the-art Password Service
+				using the <a href="https://www.rfc-editor.org/info/rfc9807/"> OPAQUE</a> protocol in <b>Rust</b> on{' '}
+				<b>ECS Fargate</b>. The Password Service scaled to handle millions of users per day without any outages and with
+				full CI/CD, complete unit, integration, canary and load testing suites, dashboards and alarms, and full
+				observability. The service was stress-tested, completed a security review and penetration test, and was
+				certified for tier 1 production use. It is saving Amazon between $800,000 - $1,400,000 yearly by replacing the
+				Cognito costs for the same MAU.
+			</>
+		),
+	},
+	{
 		name: 'Software Engineer',
 		companyName: 'Rocket Mortgage',
 		companyUrl: 'https://www.rocketmortgage.com/',
 		logo: 'rocket-mortgage.svg',
-		dateRange: 'February 2023 → Present',
+		dateRange: 'February 2023 → September 2025',
 		description: (
 			<>
 				All good things must come to an end, and due to unfavorable market conditions, Mudra Capital was forced to
