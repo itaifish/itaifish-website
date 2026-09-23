@@ -16,7 +16,7 @@ const languages = {
 	},
 	Rust: {
 		startYear: 2021,
-		skillLevel: '40%',
+		skillLevel: '80%',
 	},
 };
 

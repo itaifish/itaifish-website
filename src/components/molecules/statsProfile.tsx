@@ -3,14 +3,14 @@ const monthMs = 2592000000;
 const hourMs = 1000 * 60 * 60;
 const marriedOn = new Date('2023-12-21').getTime();
 const bornAt = 923002942;
-const now = new Date().getTime();
+const now = Date.now();
 const monthsMarried = Math.floor((now - marriedOn) / monthMs);
 const hoursAge = Math.floor((now - bornAt) / hourMs);
 
 const stats = [
 	{
 		name: 'Dota 2 Games Played',
-		amount: '3020+',
+		amount: '3100+',
 		icon: 'dota2.png',
 	},
 	{
@@ -45,7 +45,7 @@ const stats = [
 	},
 	{
 		name: 'One Piece Volumes Owned',
-		amount: 104,
+		amount: 112,
 		icon: 'onepiece.png',
 	},
 ];
@@ -62,9 +62,9 @@ export function StatsProfile() {
 						A novel™ way to tell you a bit about myself
 					</h3>
 					<div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8 xl:grid-cols-4 xl:gap-5">
-						{stats.map((stat, idx) => (
+						{stats.map((stat) => (
 							<div
-								key={idx}
+								key={stat.name}
 								className="m-15 flex flex-col items-center justify-center text-center md:flex-row md:text-left"
 							>
 								<div className="md:h-50 md:w-50 h-25 w-25 mx-auto flex-shrink-0">

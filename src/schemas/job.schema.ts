@@ -1,7 +1,6 @@
 import { z } from 'zod';
 import { Constants } from '../utils/utility';
-import { WorkType } from '@prisma/client';
-
+import { WorkType } from '../generated/prisma/enums';
 const workTypeArr = Object.keys(WorkType) as [keyof typeof WorkType, ...(keyof typeof WorkType)[]];
 
 export const newJobSchema = z.object({

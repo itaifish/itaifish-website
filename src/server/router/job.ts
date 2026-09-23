@@ -25,7 +25,7 @@ export const jobRouter = createRouter().mutation('createJobOpportunity', {
 		});
 
 		const { positionTitle, jobDescription, workType, email } = input;
-		const newJob = await ctx.prisma.jobOpportunity.create({
+		const _newJob = await ctx.prisma.jobOpportunity.create({
 			data: {
 				positionTitle,
 				jobDescription,
